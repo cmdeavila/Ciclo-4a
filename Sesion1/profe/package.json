@@ -1,0 +1,19 @@
+{
+  "name": "profe",
+  "version": "1.0.0",
+  "description": "Primera sesion de aplicaciones web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "sesion1"
+  ],
+  "author": "Carmen",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.17.1"
+  }
+}

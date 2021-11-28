@@ -1,0 +1,18 @@
+{
+  "name": "grupo17",
+  "version": "1.0.0",
+  "description": "Primera aplicacion web con nodejs",
+  "main": "express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "carmen",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.17.1"
+  }
+}

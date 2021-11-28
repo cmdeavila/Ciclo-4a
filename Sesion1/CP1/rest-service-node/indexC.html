@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CP 1</title>
+</head>
+
+<body>
+    <div class="container">
+        
+        <form>
+            <label>Number 1:</label>
+            <input id="num1" type="number" />
+            <label>Number 2:</label>
+            <input id="num2" type="number" />
+            <input type="submit" value="Add" />
+        </form>
+        <div class="result">Click Add!</div>
+    </div>
+    <script>
+        document.addEventListener("submit", sendData);
+
+        function sendData(e) {
+            e.preventDefault();
+            const a = document.querySelector("#num1").value; //recuperar los que está en las cajas de texto
+            const b = document.querySelector("#num2").value;
+            //
+            fetch("http://localhost:5000/add", {
+                    method: "POST",
+                    headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({a: parseInt(a),b: parseInt(b)})
+                })
+                .then(res => res.json())
+                .then(data => {
+                    const {result} = data;
+                    document.querySelector(".result").innerText = `The sum is: ${result}`;
+                })
+                .catch(err => console.log(err));
+        }
+    </script>
+</body>
+
+</html>
